@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Recipe Card — Chocolate Cake</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating cocoa particles container -->
+  <div class="floating-coco"></div>
+
+  <!-- Recipe Card -->
+  <div class="recipe-card">
+    
+    <!-- Recipe Title -->
+    <header class="section title">
+      <h1>Chocolate Cake</h1>
+    </header>
+
+    <!-- Image -->
+    <div class="section image">
+      <img src="images/chocolate-cake.jpg" alt="Chocolate Cake">
+    </div>
+
+    <!-- Preparation Time & Servings -->
+    <div class="section meta">
+      <div>⏱ Prep Time: 45 mins</div>
+      <div>🍽 Serves: 8</div>
+    </div>
+
+    <!-- Ingredients -->
+    <div class="section ingredients collapsed">
+      <h2>Ingredients</h2>
+      <ul>
+        <li>2 cups all-purpose flour</li>
+        <li>1.5 cups sugar</li>
+        <li>3/4 cup cocoa powder</li>
+        <li>1.5 tsp baking powder</li>
+        <li>1.5 tsp baking soda</li>
+        <li>1 tsp salt</li>
+        <li>2 eggs</li>
+        <li>1 cup milk</li>
+        <li>1/2 cup vegetable oil</li>
+        <li>2 tsp vanilla extract</li>
+      </ul>
+    </div>
+
+    <!-- Steps -->
+    <div class="section steps collapsed">
+      <h2>Step-by-Step Instructions</h2>
+      <ol>
+        <li data-min="5">Preheat oven to 350°F (175°C) and grease pans.</li>
+        <li data-min="10">Mix dry ingredients in a bowl.</li>
+        <li data-min="7">Whisk eggs, milk, oil, and vanilla; combine with dry mix.</li>
+        <li data-min="20">Pour into pans and bake for 25–30 minutes (check doneness).</li>
+        <li data-min="3">Let cool, then frost as desired.</li>
+      </ol>
+
+      <!-- Progress Bar -->
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <div class="progress-labels">
+        <span id="current-step-label">Step 0 / 5</span>
+        <span id="remaining-time-label">Remaining steps: 5</span>
+        <span id="timer-display">⏰ 45:00</span>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="section controls">
+      <button id="toggle-ingredients">Show Ingredients</button>
+      <button id="toggle-steps">Show Steps</button>
+      <button id="start-cooking">Start Cooking</button>
+      <button id="next-step" disabled>Next Step</button>
+      <button id="print">Print Recipe</button>
+      <label>
+        <input type="checkbox" id="enable-timer" checked> Auto Timer
+      </label>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
